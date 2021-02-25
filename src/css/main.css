@@ -1,12 +1,12 @@
 /*
-=============== 
+===============
 Fonts
 ===============
 */
 /* @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap"); */
 
 /*
-=============== 
+===============
 Variables
 ===============
 */
@@ -38,8 +38,8 @@ Variables
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-white: #fff;
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.2rem;
   --radius: 0.25rem;
@@ -49,7 +49,7 @@ Variables
   --fixed-width: 700px;
 }
 /*
-=============== 
+===============
 Global Styles
 ===============
 */
@@ -203,7 +203,7 @@ p {
   color: var(--clr-primary-5);
 }
 /*
-=============== 
+===============
 Navbar
 ===============
 */
@@ -228,9 +228,11 @@ Navbar
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5rem;
 }
 .nav-header img {
   margin-bottom: 0.375rem;
+  width: 30%;
 }
 .toggle-btn {
   font-size: 2rem;
@@ -282,7 +284,7 @@ Navbar
   }
 }
 /*
-=============== 
+===============
 Sidebar
 ===============
 */
@@ -338,7 +340,7 @@ Sidebar
   }
 }
 /*
-=============== 
+===============
 Sidebar Animation
 ===============
 */
@@ -401,7 +403,7 @@ Sidebar Animation
 }
 
 /*
-=============== 
+===============
 Hero
 ===============
 */
@@ -442,7 +444,7 @@ Hero
 
 @media screen and (min-width: 992px) {
   .hero::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 65%;
@@ -482,7 +484,7 @@ Hero
 }
 
 /*
-=============== 
+===============
 Services
 ===============
 */
@@ -535,7 +537,7 @@ Services
 }
 
 /*
-=============== 
+===============
 Jobs
 ===============
 */
@@ -625,7 +627,7 @@ Jobs
 }
 
 /*
-=============== 
+===============
 Projects
 ===============
 */
@@ -643,7 +645,7 @@ Projects
   z-index: 1;
 }
 .project-img::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -747,7 +749,7 @@ Projects
 }
 
 /*
-=============== 
+===============
 Blog
 ===============
 */
