@@ -496,6 +496,7 @@ Services
   text-align: center;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  cursor: none;
 }
 .service-icon {
   font-size: 2rem;
@@ -564,6 +565,7 @@ Jobs
   cursor: pointer;
   padding: 0.25rem 0;
   line-height: 1;
+  white-space: nowrap;
 }
 .job-btn:hover {
   color: var(--clr-primary-5);
@@ -572,6 +574,10 @@ Jobs
 .active-btn {
   color: var(--clr-primary-5);
   box-shadow: 0 2px var(--clr-primary-5);
+}
+.active-btn:focus {
+  border: none;
+  outline: none;
 }
 .job-info {
   /* min-height: 420px; */
