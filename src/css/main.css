@@ -228,7 +228,7 @@ Navbar
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
 }
 .nav-header img {
   margin-bottom: 0.375rem;
@@ -333,6 +333,9 @@ Sidebar
   border-color: transparent;
   color: var(--clr-red-dark);
   cursor: pointer;
+}
+.close-btn svg {
+  width: 50%;
 }
 @media screen and (min-width: 992px) {
   .sidebar {
