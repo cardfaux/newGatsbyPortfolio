@@ -232,7 +232,7 @@ Navbar
 }
 .nav-header img {
   margin-bottom: 0.375rem;
-  width: 30%;
+  /* width: 30%; */
 }
 .toggle-btn {
   font-size: 2rem;
