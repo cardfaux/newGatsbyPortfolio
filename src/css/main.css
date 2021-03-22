@@ -234,6 +234,14 @@ Navbar
   margin-bottom: 0.375rem;
   /* width: 30%; */
 }
+.nav-header p.first_name--logo {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.nav-header p.first_name--logo span.last_name--logo {
+  color: var(--clr-primary-5);
+  font-weight: bolder;
+}
 .toggle-btn {
   font-size: 2rem;
   background: transparent;
