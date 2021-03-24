@@ -13,6 +13,7 @@ module.exports = {
     image: '/twitter-img.png',
     siteUrl: 'https://jameshagood.tech',
   },
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
