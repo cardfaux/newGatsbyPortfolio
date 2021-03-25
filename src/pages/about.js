@@ -13,7 +13,10 @@ const About = ({
 
   return (
     <Layout>
-      <SEO title="About Me" description="about webdev" />
+      <SEO
+        title="About Me | James Hagood Web Development"
+        description="James Hagood a freelance web developer. Developing Web sites, Web applications, eCommerce stores, and anything else web related."
+      />
       <section className="about-page">
         <div className="section-center about-center">
           <Image fluid={image.childImageSharp.fluid} className="about-img" />

@@ -6,6 +6,7 @@ import Services from '../components/Services';
 import Jobs from '../components/Jobs';
 import Projects from '../components/Projects';
 import Blogs from '../components/Blogs';
+import SEO from '../components/SEO';
 
 export default ({ data }) => {
   const {
@@ -16,6 +17,10 @@ export default ({ data }) => {
   return (
     <>
       <Layout>
+        <SEO
+          title="Home | James Hagood Web Development"
+          description="James Hagood : A freelance web developer helping small businesses combat COVID19"
+        />
         <Hero />
         <Services />
         <Jobs />

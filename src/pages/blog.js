@@ -11,7 +11,7 @@ const Blog = ({
 }) => {
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title="Blog | James Hagood Web Development" />
       <section className="blog-page">
         <Blogs blogs={blogs} title="blog" />
       </section>
