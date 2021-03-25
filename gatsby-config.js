@@ -7,8 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: 'James Hagood',
-    description:
-      'My name is James Hagood, I am a freelance web developer. Business websites, Informational websites, Web Applications, Wordpress websites, Shopify Stores, Theme customizations, Theme Development, Application development, Web/Application Design, SVG/Animations, anything else web related.',
+    description: 'My name is James Hagood, I am a web devloper.',
     author: 'James Hagood',
     twitterUsername: '@JamesHagoodDD',
     image: '/twitter-img.png',
