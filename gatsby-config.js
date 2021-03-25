@@ -64,6 +64,10 @@ module.exports = {
         //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
         contentTypes: [`jobs`, `projects`, `blogs`],
         singleTypes: [`about`],
+        loginData: {
+          identifier: 'cardfaux',
+          password: 'Fsuore1234#',
+        },
       },
     },
     {
