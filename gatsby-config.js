@@ -65,7 +65,7 @@ module.exports = {
         contentTypes: [`jobs`, `projects`, `blogs`],
         singleTypes: [`about`],
         loginData: {
-          identifier: 'cardfaux',
+          identifier: 'cardfaux@tutanota.com',
           password: 'Fsuore1234#',
         },
       },
