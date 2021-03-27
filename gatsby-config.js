@@ -4,12 +4,25 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://jameshagood.tech',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 module.exports = {
   siteMetadata: {
     title: 'James Hagood',
+    titleTemplate:
+      '%s · Jasper, Alabama web development, website design, eCommerce development',
     description:
-      'My name is James Hagood, I am a web devloper helping small businesses combat COVID-19 by getting online to reach more customers and increase their revenue. I am working out of Alabama bringing your ideas to the web.',
+      'James Hagood Design & Development. Jasper, Alabama web development, website design, eCommerce development, Helping small businesses get online and combat COVID-19 in 2021',
     author: 'James Hagood',
+    keywords:
+      'web development, web design, websites, applications, eCommerce, wordpress, shopify, custom websites, website templates, Jasper Alabama web design',
     twitterUsername: '@JamesHagoodDD',
     image: '/twitter-img.png',
     siteUrl: 'https://jameshagood.tech',
@@ -23,7 +36,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
-        trackingId: process.env.GOOGLE_TRACKING,
+        trackingId: `${process.env.GOOGLE_TRACKING}`,
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: false,
         // Setting this parameter is optional
@@ -46,6 +59,27 @@ module.exports = {
         sampleRate: 5,
         siteSpeedSampleRate: 10,
         cookieDomain: 'example.com',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }],
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+        },
       },
     },
     {
