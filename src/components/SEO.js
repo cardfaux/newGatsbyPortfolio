@@ -19,7 +19,14 @@ const query = graphql`
     }
   }
 `;
-const SEO = ({ title, description }) => {
+const SEO = ({
+  title,
+  description,
+  anotherImage,
+  socialTitle,
+  socialDescription,
+  article,
+}) => {
   const { site } = useStaticQuery(query);
   const {
     siteDesc,
@@ -43,19 +50,50 @@ const SEO = ({ title, description }) => {
         <meta name="image" content={image} />
         {/* FACEBOOK CARD */}
         <meta property="og:url" content={siteUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={siteTitle} />
-        <meta property="og:description" content={siteDesc} />
-        <meta property="og:image" content={`${siteUrl}${image}`} />
+        {article ? (
+          <meta property="og:type" content="article" />
+        ) : (
+          <meta property="og:type" content="website" />
+        )}
+        <meta property="fb:app_id" content="243287676742561" />
+        {article ? (
+          <meta property="og:title" content={socialTitle} />
+        ) : (
+          <meta property="og:title" content={siteTitle} />
+        )}
+        {article ? (
+          <meta property="og:description" content={socialDescription} />
+        ) : (
+          <meta property="og:description" content={siteDesc} />
+        )}
+        {article ? (
+          <meta property="og:image" content={`${siteUrl}${anotherImage}`} />
+        ) : (
+          <meta property="og:image" content={`${siteUrl}${image}`} />
+        )}
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="531" />
+        <meta property="og:image:alt" content={siteDesc} />
         {/* twitter cards */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content={twitterUsername} />
         <meta name="twitter:site" content={twitterUsername} />
-        <meta name="twitter:title" content={siteTitle} />
-        <meta name="twitter:description" content={siteDesc} />
-        <meta name="twitter:image" content={`${siteUrl}${image}`} />
+        {article ? (
+          <meta name="twitter:title" content={socialTitle} />
+        ) : (
+          <meta name="twitter:title" content={siteTitle} />
+        )}
+        {article ? (
+          <meta name="twitter:description" content={socialDescription} />
+        ) : (
+          <meta name="twitter:description" content={siteDesc} />
+        )}
+        {article ? (
+          <meta name="twitter:image" content={`${siteUrl}${anotherImage}`} />
+        ) : (
+          <meta name="twitter:image" content={`${siteUrl}${image}`} />
+        )}
+        <link rel="icon" href={'/favicon.ico'} />
         <link rel="canonical" href="https://jameshagood.tech" />
         <JsonLd>
           {{

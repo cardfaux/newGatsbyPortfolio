@@ -14,7 +14,7 @@ const About = ({
   return (
     <Layout>
       <SEO
-        title="About Me | James Hagood Web Development"
+        title="About Me"
         description="James Hagood a freelance web developer. Developing Web sites, Web applications, eCommerce stores, and anything else web related."
       />
       <section className="about-page">

@@ -20,7 +20,6 @@ export default ({ data }) => {
         <SEO
           title="James Hagood Web Development"
           description="James Hagood : A freelance web developer helping small businesses combat COVID19"
-          keywords="web development, web design, websites, applications, eCommerce, wordpress, shopify, custom websites, website templates"
         />
         <Hero />
         <Services />

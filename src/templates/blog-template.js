@@ -5,11 +5,20 @@ import ReactMarkdown from 'react-markdown';
 import SEO from '../components/SEO';
 
 const ComponentName = ({ data }) => {
-  const { content, title, description } = data.blog;
+  const { content, title, description, image } = data.blog;
+
+  const blogImage = image.childImageSharp.fluid.src;
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
+      <SEO
+        title={title}
+        description={description}
+        anotherImage={blogImage}
+        socialTitle={title}
+        socialDescription={description}
+        article
+      />
       <section className="blog-template">
         <div className="section-center">
           <article className="blog-content">
@@ -30,6 +39,13 @@ export const query = graphql`
       content
       title
       description
+      image {
+        childImageSharp {
+          fluid {
+            src
+          }
+        }
+      }
     }
   }
 `;
