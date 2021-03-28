@@ -25,6 +25,7 @@ const SEO = ({
   anotherImage,
   socialTitle,
   socialDescription,
+  socialALT,
   article,
 }) => {
   const { site } = useStaticQuery(query);
@@ -73,7 +74,11 @@ const SEO = ({
         )}
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="531" />
-        <meta property="og:image:alt" content={siteDesc} />
+        {article ? (
+          <meta property="og:image:alt" content={socialALT} />
+        ) : (
+          <meta property="og:image:alt" content={siteDesc} />
+        )}
         {/* twitter cards */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content={twitterUsername} />

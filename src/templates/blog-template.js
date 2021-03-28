@@ -17,6 +17,7 @@ const ComponentName = ({ data }) => {
         anotherImage={blogImage}
         socialTitle={title}
         socialDescription={description}
+        socialALT={description}
         article
       />
       <section className="blog-template">
