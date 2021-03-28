@@ -1067,3 +1067,12 @@ Blog Template
   margin: 3rem 0;
   object-fit: cover;
 }
+
+/* Thank You Page */
+div.contact-thank-you_container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

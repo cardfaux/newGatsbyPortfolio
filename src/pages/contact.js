@@ -34,22 +34,60 @@ const contact = () => {
               submit here
             </button>
           </form> */}
+          {/* <form
+            name="Contact Form"
+            method="POST"
+            data-netlify="true"
+            action="/thank-you"
+          >
+          <div className="form-group">
+            <input type="hidden" name="form-name" value="Contact Form" />
+              <div>
+                <label>Your Email:</label>
+                <input type="email" name="email" />
+              </div>
+              <div>
+                <label>Message:</label>
+                <textarea name="message" />
+              </div>
+          </div>
+
+            <button type="submit">Send</button>
+          </form> */}
+
           <form
             name="Contact Form"
             method="POST"
             data-netlify="true"
             action="/thank-you"
           >
-            <input type="hidden" name="form-name" value="Contact Form" />
-            <div>
-              <label>Your Email:</label>
-              <input type="email" name="email" />
-            </div>
-            <div>
+            <div className="form-group">
+              <input type="hidden" name="form-name" value="Contact Form" />
+              <label>Name:</label>
+              <input
+                type="text"
+                name="name"
+                placeholder=""
+                className="form-control"
+              />
+              <label>Email:</label>
+              <input
+                type="email"
+                placeholder=""
+                name="email"
+                className="form-control"
+              />
               <label>Message:</label>
-              <textarea name="message" />
+              <textarea
+                name="message"
+                rows="5"
+                placeholder=""
+                className="form-control"
+              ></textarea>
             </div>
-            <button type="submit">Send</button>
+            <button type="submit" className="submit-btn btn">
+              submit here
+            </button>
           </form>
         </article>
       </section>
