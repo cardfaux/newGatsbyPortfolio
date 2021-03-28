@@ -34,39 +34,22 @@ const contact = () => {
               submit here
             </button>
           </form> */}
-          <form name="contact" method="POST" data-netlify="true">
-            <div className="form-group">
-              <label>
-                Name:
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="john doe"
-                  className="form-control"
-                />
-              </label>
-              <label>
-                Email:
-                <input
-                  type="email"
-                  placeholder="johndoe@email.com"
-                  name="email"
-                  className="form-control"
-                />
-              </label>
-              <label>
-                Message:
-                <textarea
-                  name="message"
-                  rows="5"
-                  placeholder="type your message here"
-                  className="form-control"
-                ></textarea>
-              </label>
+          <form
+            name="Contact Form"
+            method="POST"
+            data-netlify="true"
+            action="/thank-you"
+          >
+            <input type="hidden" name="form-name" value="Contact Form" />
+            <div>
+              <label>Your Email:</label>
+              <input type="email" name="email" />
             </div>
-            <button type="submit" className="submit-btn btn">
-              submit here
-            </button>
+            <div>
+              <label>Message:</label>
+              <textarea name="message" />
+            </div>
+            <button type="submit">Send</button>
           </form>
         </article>
       </section>
